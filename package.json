@@ -1,0 +1,25 @@
+{
+  "name": "my-app",
+  "scripts": {
+    "dev": "solid-start dev",
+    "build": "solid-start build",
+    "start": "solid-start start"
+  },
+  "type": "module",
+  "devDependencies": {
+    "esbuild": "^0.14.54",
+    "postcss": "^8.4.26",
+    "solid-start-node": "^0.3.0",
+    "solid-start-cloudflare-workers": "^0.3.3",
+    "vite": "^4.4.6"
+  },
+  "dependencies": {
+    "@solidjs/meta": "^0.28.5",
+    "@solidjs/router": "^0.8.2",
+    "solid-js": "^1.7.11",
+    "solid-start": "^0.3.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
