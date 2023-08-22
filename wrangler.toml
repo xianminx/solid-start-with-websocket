@@ -1,0 +1,19 @@
+name = "solid-start-with-websocket" # todo
+main = "./dist/server.js"
+compatibility_date = "2022-05-03"
+# account_id = "fa2a5e3787deead800c822a0e1171763"
+# zone_id = "9258b29d3b22bdba0666469e82d18225"
+# type = "javascript"
+# route = "start.solidjs.com/*"
+
+[site]
+bucket = "./dist/public"
+
+[durable_objects]
+bindings = [
+  { name = "DO_WEBSOCKET", class_name = "WebSocketDurableObject" },
+]
+
+[[migrations]]
+tag = "v1" # Should be unique for each entry
+new_classes = ["WebSocketDurableObject"] # Array of new classes

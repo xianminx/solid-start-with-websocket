@@ -20,6 +20,10 @@ async function wsHandler(request, ctx) {
   let pair = new WebSocketPair();
   const [client, server] = Object.values(pair);
 
+
+  // TODO: https://developers.cloudflare.com/workers/runtime-apis/websockets/use-websockets/
+  // ​​Durable Objects and WebSocket state If your application needs to coordinate among multiple WebSocket connections, such as a chat room or game match, you will need to create a Durable Object so clients send messages to a single-point-of-coordination. Durable Objects are a coordinated state tool for Cloudflare Workers, which are often used in parallel with WebSockets to persist state over multiple clients and connections. Refer to Durable Objects to get started, and prefer using the Durable Objects WebSockets Hibernation API rather than the .accept method described above.
+
   // We're going to take pair[1] as our end, and return pair[0] to the client.
   // Accept our end of the WebSocket. This tells the runtime that we'll be terminating the
   // WebSocket in JavaScript, not sending it elsewhere.
